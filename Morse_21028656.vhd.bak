@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+
+entity Morse is
+port ( 
+A :in std_logic_vector(1 downto 0);
+B:out std_logic_vector(41 downto 0);
+
+
+);
+
+
+architecture rtl of Morse is
+
+component Input_Converter_Device is 
+
+port ( 
+clk: in std_logic;
+A : in std_logic;
+C:inout std_logic_vector(1 downto 0);
+B:out std_logic_vector(1 downto 0)
+
+);
+
+
+G1: Input_Converter_Device port map(clk,reset,A,B,C,clkout);
+G2: finite_State_Machine port map(clk,A,B,C);
+
+
+
+end rtl;

@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+
+entity Finite_State_Machine is
+port ( 
+clk: in std_logic;
+A : in std_logic_vector(1 downto 0);
+B:out std_logic_vector(7 downto 0);
+di: out std_logic
+
+);
+
+end Finite_State_Machine;
+
+architecture bhv of Finite_State_Machine is
+
+end bhv;

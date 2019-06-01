@@ -1,0 +1,126 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+# Date created = 15:45:06  April 27, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ICD_21028656_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY Morse
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:45:06  APRIL 27, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION 14.1.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE ICD_21028656.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA14 -to A
+set_location_assignment PIN_V16 -to B[0]
+set_location_assignment PIN_W16 -to B[1]
+set_location_assignment PIN_Y16 -to reset
+set_location_assignment PIN_Y21 -to clkout
+set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name CDF_FILE output_files/Chain4.cdf
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name CDF_FILE output_files/Chain8.cdf
+set_global_assignment -name SYNCHRONIZER_IDENTIFICATION OFF
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name CDF_FILE output_files/Chain5.cdf
+set_global_assignment -name CDF_FILE output_files/Chain6.cdf
+set_global_assignment -name CDF_FILE output_files/Chain10.cdf
+set_global_assignment -name VHDL_FILE FSM_21028656.vhd
+set_global_assignment -name CDF_FILE Chain14.cdf
+set_global_assignment -name VHDL_FILE ascii2led.vhd
+set_global_assignment -name VHDL_FILE Morse_21028656.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain16.cdf
+set_global_assignment -name CDF_FILE output_files/Chain18.cdf
+set_global_assignment -name VHDL_FILE shiftregister_21028656.vhd
+set_global_assignment -name CDF_FILE Chain9.cdf
+set_location_assignment PIN_AE26 -to L0[0]
+set_location_assignment PIN_AE27 -to L0[1]
+set_location_assignment PIN_AE28 -to L0[2]
+set_location_assignment PIN_AG27 -to L0[3]
+set_location_assignment PIN_AF28 -to L0[4]
+set_location_assignment PIN_AG28 -to L0[5]
+set_location_assignment PIN_AH28 -to L0[6]
+set_location_assignment PIN_AJ29 -to L1[0]
+set_location_assignment PIN_AH29 -to L1[1]
+set_location_assignment PIN_AH30 -to L1[2]
+set_location_assignment PIN_AG30 -to L1[3]
+set_location_assignment PIN_AF29 -to L1[4]
+set_location_assignment PIN_AF30 -to L1[5]
+set_location_assignment PIN_AD27 -to L1[6]
+set_location_assignment PIN_AB23 -to L2[0]
+set_location_assignment PIN_AE29 -to L2[1]
+set_location_assignment PIN_AD29 -to L2[2]
+set_location_assignment PIN_AC28 -to L2[3]
+set_location_assignment PIN_AD30 -to L2[4]
+set_location_assignment PIN_AC29 -to L2[5]
+set_location_assignment PIN_AC30 -to L2[6]
+set_location_assignment PIN_AD26 -to L3[0]
+set_location_assignment PIN_AC27 -to L3[1]
+set_location_assignment PIN_AD25 -to L3[2]
+set_location_assignment PIN_AC25 -to L3[3]
+set_location_assignment PIN_AB28 -to L3[4]
+set_location_assignment PIN_AB25 -to L3[5]
+set_location_assignment PIN_AB22 -to L3[6]
+set_location_assignment PIN_AA24 -to L4[0]
+set_location_assignment PIN_Y23 -to L4[1]
+set_location_assignment PIN_Y24 -to L4[2]
+set_location_assignment PIN_W22 -to L4[3]
+set_location_assignment PIN_V23 -to L4[5]
+set_location_assignment PIN_W25 -to L4[6]
+set_location_assignment PIN_V25 -to L5[0]
+set_location_assignment PIN_AA28 -to L5[1]
+set_location_assignment PIN_Y27 -to L5[2]
+set_location_assignment PIN_AB27 -to L5[3]
+set_location_assignment PIN_AB26 -to L5[4]
+set_location_assignment PIN_AA26 -to L5[5]
+set_location_assignment PIN_AA25 -to L5[6]
+set_location_assignment PIN_W24 -to L4[4]
+set_global_assignment -name CDF_FILE output_files/Chain12.cdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

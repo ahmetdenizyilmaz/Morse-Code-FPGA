@@ -1,0 +1,81 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+ 
+entity Clock_Divider is
+port 
+( clk,reset: in std_logic;
+clock_out: out std_logic
+);
+end Clock_Divider;
+ 
+architecture bhv of Clock_Divider is
+ 
+signal count: integer:=1;
+signal tmp : std_logic := '0';
+ 
+begin
+ 
+process(clk,reset)
+begin
+if(reset='1') then
+count<=1;
+tmp<='0';
+elsif(clk'event and clk='1') then
+count <=count+1;
+if (count = 25000000) then -- 50MHZ/25000000 = 2hz
+tmp <= NOT tmp;
+count <= 1;
+end if;
+end if;
+clock_out <= tmp;
+end process;
+ 
+end bhv;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+
+entity Input_Converter_Device is
+port ( 
+clk: in std_logic;
+A : in std_logic;
+B:out std_logic_vector(1 downto 0);
+
+);
+
+end Input_Converter_Device;
+
+architecture bhv of Input_Converter_Device is
+signal count: integer:=1;
+signal idlecount: integer:=1;
+process(clk,reset)
+signal tmp : std_logic := '0';
+
+begin
+
+if(A='1') then
+count<=count+1;
+else
+idlecount<=idlecount+1;
+end if;
+
+if(idlecount>25000000) then 
+B<="11";
+else if(count>25000000) then
+B<="10";
+else then B<="01";
+end if;
+
+
+
+
+end process;
+
+
+
+
+
+end bhv;
+
