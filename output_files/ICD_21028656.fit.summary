@@ -1,0 +1,19 @@
+Fitter Status : Successful - Mon Apr 29 03:56:16 2019
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Web Edition
+Revision Name : ICD_21028656
+Top-level Entity Name : Morse
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 170 / 32,070 ( < 1 % )
+Total registers : 171
+Total pins : 48 / 457 ( 11 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 4,065,280 ( 0 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,380 @@
+Analysis & Synthesis report for ICD_21028656
+Mon Apr 29 03:55:23 2019
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Apr 29 03:55:23 2019      ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                   ; ICD_21028656                               ;
+; Top-level Entity Name           ; Morse                                      ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 160                                        ;
+; Total pins                      ; 48                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Morse              ; ICD_21028656       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; ICD_21028656.vhd                 ; yes             ; User VHDL File  ; C:/Users/student/Desktop/morsecode/ICD_21028656.vhd           ;         ;
+; FSM_21028656.vhd                 ; yes             ; User VHDL File  ; C:/Users/student/Desktop/morsecode/FSM_21028656.vhd           ;         ;
+; ascii2led.vhd                    ; yes             ; User VHDL File  ; C:/Users/student/Desktop/morsecode/ascii2led.vhd              ;         ;
+; Morse_21028656.vhd               ; yes             ; User VHDL File  ; C:/Users/student/Desktop/morsecode/Morse_21028656.vhd         ;         ;
+; shiftregister_21028656.vhd       ; yes             ; User VHDL File  ; C:/Users/student/Desktop/morsecode/shiftregister_21028656.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 169       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 268       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 68        ;
+;     -- 5 input functions                    ; 27        ;
+;     -- 4 input functions                    ; 20        ;
+;     -- <=3 input functions                  ; 153       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 160       ;
+;                                             ;           ;
+; I/O pins                                    ; 48        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 160       ;
+; Total fan-out                               ; 1541      ;
+; Average fan-out                             ; 2.94      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------+
+; |Morse                         ; 268 (1)           ; 160 (0)      ; 0                 ; 0          ; 48   ; 0            ; |Morse                                              ; work         ;
+;    |Finite_State_Machine:G2|   ; 63 (63)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |Morse|Finite_State_Machine:G2                      ; work         ;
+;    |Input_Converter_Device:G1| ; 142 (0)           ; 101 (0)      ; 0                 ; 0          ; 0    ; 0            ; |Morse|Input_Converter_Device:G1                    ; work         ;
+;       |Clock_Divider:G1|       ; 41 (41)           ; 33 (33)      ; 0                 ; 0          ; 0    ; 0            ; |Morse|Input_Converter_Device:G1|Clock_Divider:G1   ; work         ;
+;       |Input_Converter:G2|     ; 101 (101)         ; 68 (68)      ; 0                 ; 0          ; 0    ; 0            ; |Morse|Input_Converter_Device:G1|Input_Converter:G2 ; work         ;
+;    |Shift_register:G4|         ; 46 (46)           ; 42 (42)      ; 0                 ; 0          ; 0    ; 0            ; |Morse|Shift_register:G4                            ; work         ;
+;    |ascii2led:G3|              ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Morse|ascii2led:G3                                 ; work         ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 160   ;
+; Number of registers using Synchronous Clear  ; 94    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 60    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Inverted Register Statistics                                        ;
++-----------------------------------------------------------+---------+
+; Inverted Register                                         ; Fan out ;
++-----------------------------------------------------------+---------+
+; Shift_register:G4|Q0[1]                                   ; 2       ;
+; Shift_register:G4|Q0[2]                                   ; 2       ;
+; Shift_register:G4|Q0[4]                                   ; 2       ;
+; Shift_register:G4|Q0[5]                                   ; 2       ;
+; Shift_register:G4|Q1[1]                                   ; 2       ;
+; Shift_register:G4|Q1[2]                                   ; 2       ;
+; Shift_register:G4|Q1[4]                                   ; 2       ;
+; Shift_register:G4|Q1[5]                                   ; 2       ;
+; Shift_register:G4|Q2[1]                                   ; 2       ;
+; Shift_register:G4|Q2[2]                                   ; 2       ;
+; Shift_register:G4|Q2[4]                                   ; 2       ;
+; Shift_register:G4|Q2[5]                                   ; 2       ;
+; Shift_register:G4|Q3[1]                                   ; 2       ;
+; Shift_register:G4|Q3[2]                                   ; 2       ;
+; Shift_register:G4|Q3[4]                                   ; 2       ;
+; Shift_register:G4|Q3[5]                                   ; 2       ;
+; Shift_register:G4|Q4[1]                                   ; 2       ;
+; Shift_register:G4|Q4[2]                                   ; 2       ;
+; Shift_register:G4|Q4[4]                                   ; 2       ;
+; Shift_register:G4|Q4[5]                                   ; 2       ;
+; Shift_register:G4|Q5[1]                                   ; 2       ;
+; Shift_register:G4|Q5[2]                                   ; 2       ;
+; Shift_register:G4|Q5[4]                                   ; 2       ;
+; Shift_register:G4|Q5[5]                                   ; 2       ;
+; Input_Converter_Device:G1|Input_Converter:G2|countt[0]    ; 3       ;
+; Input_Converter_Device:G1|Input_Converter:G2|idlecount[0] ; 2       ;
+; Input_Converter_Device:G1|Clock_Divider:G1|count[0]       ; 2       ;
+; Total number of inverted registers = 27                   ;         ;
++-----------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |Morse|Input_Converter_Device:G1|Input_Converter:G2|idlecount[13] ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Morse|Shift_register:G4|Q5[3]                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Morse|Shift_register:G4|Q1[0]                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Morse|Input_Converter_Device:G1|Input_Converter:G2|outsig[1]     ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |Morse|Shift_register:G4|Q5[1]                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 160                         ;
+;     CLR               ; 2                           ;
+;     CLR SCLR          ; 31                          ;
+;     ENA               ; 60                          ;
+;     SCLR              ; 63                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 292                         ;
+;     arith             ; 96                          ;
+;         1 data inputs ; 96                          ;
+;     normal            ; 196                         ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 20                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 68                          ;
+; boundary_port         ; 48                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.81                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Mon Apr 29 03:55:04 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ICD_21028656 -c ICD_21028656
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 6 design units, including 3 entities, in source file icd_21028656.vhd
+    Info (12022): Found design unit 1: Clock_Divider-bhv
+    Info (12022): Found design unit 2: Input_Converter-bhv
+    Info (12022): Found design unit 3: Input_Converter_Device-rtl
+    Info (12023): Found entity 1: Clock_Divider
+    Info (12023): Found entity 2: Input_Converter
+    Info (12023): Found entity 3: Input_Converter_Device
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_21028656.vhd
+    Info (12022): Found design unit 1: Finite_State_Machine-bhv
+    Info (12023): Found entity 1: Finite_State_Machine
+Info (12021): Found 2 design units, including 1 entities, in source file ascii2led.vhd
+    Info (12022): Found design unit 1: ascii2led-Behavioral
+    Info (12023): Found entity 1: ascii2led
+Info (12021): Found 2 design units, including 1 entities, in source file morse_21028656.vhd
+    Info (12022): Found design unit 1: Morse-rtl
+    Info (12023): Found entity 1: Morse
+Info (12021): Found 2 design units, including 1 entities, in source file shiftregister_21028656.vhd
+    Info (12022): Found design unit 1: Shift_register-bhv
+    Info (12023): Found entity 1: Shift_register
+Info (12127): Elaborating entity "Morse" for the top level hierarchy
+Info (12128): Elaborating entity "Input_Converter_Device" for hierarchy "Input_Converter_Device:G1"
+Info (12128): Elaborating entity "Clock_Divider" for hierarchy "Input_Converter_Device:G1|Clock_Divider:G1"
+Warning (10492): VHDL Process Statement warning at ICD_21028656.vhd(31): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Input_Converter" for hierarchy "Input_Converter_Device:G1|Input_Converter:G2"
+Info (12128): Elaborating entity "Finite_State_Machine" for hierarchy "Finite_State_Machine:G2"
+Warning (10036): Verilog HDL or VHDL warning at FSM_21028656.vhd(20): object "insig" assigned a value but never read
+Info (12128): Elaborating entity "ascii2led" for hierarchy "ascii2led:G3"
+Info (12128): Elaborating entity "Shift_register" for hierarchy "Shift_register:G4"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 326 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 278 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 708 megabytes
+    Info: Processing ended: Mon Apr 29 03:55:23 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:24
+
+
